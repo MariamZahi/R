@@ -1,0 +1,47 @@
+b=1.5; a=1.5; l1= -1; l2=-0.5; l3=0; l4= 0.5; l5= 1;
+x=c(0:10);
+
+
+curve((a^(b-1))*(x^(-b))*(b-1)*(1-l1+2*l1*(a^(b-1))*(x^(1-b))), 1.5, 20, col=1, 
+lty=1,ylim=c(0,1), yaxs='i',xlab='x',ylab='f(x)');
+
+
+curve((a^(b-1))*(x^(-b))*(b-1)*(1-l2+2*l2*(a^(b-1))*(x^(1-b))), add= TRUE, col=2, lty=2);
+curve((a^(b-1))*(x^(-b))*(b-1)*(1-l3+2*l3*(a^(b-1))*(x^(1-b))), add= TRUE, col=3, lty=3);
+curve((a^(b-1))*(x^(-b))*(b-1)*(1-l4+2*l4*(a^(b-1))*(x^(1-b))), add= TRUE, col=4, lty=4);
+curve((a^(b-1))*(x^(-b))*(b-1)*(1-l5+2*l5*(a^(b-1))*(x^(1-b))), add= TRUE, col=6, lty=6);
+
+legend("topright", legend = c(expression(paste(alpha, "=", '1.5,', beta, "=", '1.5, ', lambda, " = ", '-1')),
+expression(paste(alpha, "=", '1.5,', beta, '=', '1.5, ', lambda, ' = ', '-0.5')), 
+expression(paste(alpha, "=", '1.5,', beta, '=', '1.5, ', lambda, ' = ', '0')), 
+expression(paste(alpha, "=", '1.5,', beta, '=', '1.5, ', lambda, ' = ', '0.5')),
+expression(paste(alpha, "=", '1.5,', beta, '=', '1.5, ', lambda, ' = ', '1'))),
+ col=c(1,2,3,4,6), lty = c(1,2,3,4,6))
+
+
+
+___________________________________________________________________________________________________
+
+b=2; a=1; l1= -1; l2=-0.5; l3=0; l4= 0.5; l5= 1;
+x=c(0:10);
+
+
+curve((1+(a^(b-1))*(x^(1-b))*(l1-1)-l1*(a^(2*b-2))*(x^(2-2*b))), 1, 10, col=1,
+ylim=c(0,1),lty=1,xlab='x',ylab='F(x)');
+
+
+curve((1+(a^(b-1))*(x^(1-b))*(l2-1)-l2*(a^(2*b-2))*(x^(2-2*b))), add= TRUE, col=2,lty=2);
+curve((1+(a^(b-1))*(x^(1-b))*(l3-1)-l3*(a^(2*b-2))*(x^(2-2*b))), add= TRUE, col=3,lty=3);
+curve((1+(a^(b-1))*(x^(1-b))*(l4-1)-l4*(a^(2*b-2))*(x^(2-2*b))), add= TRUE, col=4,lty=4);
+curve((1+(a^(b-1))*(x^(1-b))*(l5-1)-l5*(a^(2*b-2))*(x^(2-2*b))), add= TRUE, col=6,lty=6);
+
+legend("bottomright", legend = c(expression(paste(alpha, "=", '1,', beta, "=", '2, ', lambda, " = ", '-1')),
+expression(paste(alpha, "=", '1,', beta, '=', '2, ', lambda, ' = ', '-0.5')), 
+expression(paste(alpha, "=", '1,', beta, '=', '2, ', lambda, ' = ', '0')), 
+expression(paste(alpha, "=", '1,', beta, '=', '2, ', lambda, ' = ', '0.5')),
+expression(paste(alpha, "=", '1,', beta, '=', '2, ', lambda, ' = ', '1'))),
+ col=c(1,2,3,4,6), lty = c(1,2,3,4,6), cex=0.75)
+
+
+
+_______________________________________________________________________________________________
