@@ -1,0 +1,17 @@
+a=1; b= 1.5; l= 0.2;
+x=runif(50,1,10);
+d=(1-l+2*l*(a^(b-1))*(x^(1-b)));
+num=2*(a^(b-1))*(x^(1-b))-1;
+
+l= num/d
+
+a=0.1; 
+n=length(x)
+
+
+logLik=(n*log(b-1)+n*(b-1)*log(a)-b*log(x)+log(1-l+2*l*(a^(b-1))*(x^(1-b))))
+
+
+
+mle = maxLik(logLik, start = c(l= -1, b=1.2))
+summary(mle)
